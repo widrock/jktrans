@@ -5,7 +5,7 @@ if (isset($_SESSION["login"])) {
   header("Location: index.php");
   exit();
 }
-$conn = mysqli_connect("localhost", "root", "", "unpas");
+$conn = mysqli_connect("localhost", "root", "", "jktrans");
 
 if (isset($_POST["login"])) {
   $username = $_POST["username"];
@@ -18,6 +18,8 @@ if (isset($_POST["login"])) {
     if (password_verify($pass, $row["password"])) {
 
       $_SESSION['login'] = true;
+      $_SESSION['nama'] = $row['nama'];
+      $_SESSION['jabatan'] = $row['jabatan'];
       echo "<script>
             alert('Login berhasil');
             document.location.href = 'index.php'

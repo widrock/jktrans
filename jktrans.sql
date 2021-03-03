@@ -31,9 +31,32 @@ CREATE TABLE `rekapan` (
   `penerima` varchar(50) DEFAULT NULL,
   `ket` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `rekapan` */
+
+insert  into `rekapan`(`id`,`sp`,`colli`,`berat`,`kode`,`franco`,`confrankert`,`penerima`,`ket`) values 
+(10,'sp','colli','berat','kode','berat','confrankerttttttttttttttttt','penerima','1'),
+(11,'tes','tes','tes','tes','tes','tes','tes','1');
+
+/*Table structure for table `user` */
+
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(50) DEFAULT NULL,
+  `jabatan` varchar(50) DEFAULT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `password` varchar(225) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `user` */
+
+insert  into `user`(`id`,`nama`,`jabatan`,`username`,`password`) values 
+(4,'a','Admin','a','$2y$10$Q0fN1r0K2lmeGMBcJhZAZe6H5jL01WxZyY0WgAqWoICDDEVbMy9tC'),
+(5,'Eka Laksamana','Admin','eka','$2y$10$tjCq6UYNuMM.7k8gba.ksOz35RxkGc3fanWXNZmyc2L64ljjpMDvW');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

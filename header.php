@@ -59,7 +59,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Wayan Bagus</span>
+              <span class="hidden-xs"><?php echo $_SESSION["nama"]; ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -67,8 +67,8 @@
                 <img src="assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Wayan Bagus
-                  <small>Web Developer</small>
+                  <?php echo $_SESSION["nama"]; ?>
+                  <small><?php echo $_SESSION["jabatan"]; ?></small>
                 </p>
               </li>
                 <!-- /.row -->
@@ -76,10 +76,9 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -98,14 +97,14 @@
           <img src="assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Wayan Bagus</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Web Developers</a>
+          <p><?php echo $_SESSION["nama"]; ?></p>
+          <a href="#"><i class="fa fa-circle text-success"></i> <?php echo $_SESSION["jabatan"]; ?></a>
         </div>
       </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        <li><a href="#"><i class="fa fa-home"></i> <span>Home</span></a></li>
+        <li><a href="home.php"><i class="fa fa-home"></i> <span>Home</span></a></li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-file"></i> <span>Data</span>
@@ -117,7 +116,6 @@
             <li><a href="index.php"><i class="fa fa-circle-o"></i> Rekapan</a></li>
           </ul>
         </li>
-        <li><a href="logout.php"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->

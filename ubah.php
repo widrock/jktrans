@@ -1,4 +1,9 @@
-
+<?php
+session_start();
+if (!isset($_SESSION["login"])) {
+  header("Location: login.php");
+  exit;
+} ?>
 
 <?php 
 include 'header.php';
@@ -25,7 +30,7 @@ include 'header.php';
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Tambah Rekapan</h3>
-              <a href="index.php" class="pull-right btn btn-default">Lihat Data</a>
+              <a href="index.php" class="pull-right btn btn-default"><i class="fa fa-mail-reply-all (alias)"></i>   &nbsp;Lihat DataLihat Data</a>
             </div>
             <form method="post" action="uabh_act.php" enctype="multipart/form-data">
             	<?php
